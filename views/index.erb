@@ -1,0 +1,17 @@
+<h1>Cheap Advisor</h1>
+
+<h2>
+  We are <%= Time.now %>.
+</h2>
+
+<ul>
+  <% @restaurants.each do |restaurant| %>
+    <li>
+      <%= restaurant.name %> (<%= restaurant.description %>)
+      <a href="/restaurants/<%= restaurant.id %>">More details</a>
+    </li>
+  <% end %>
+</ul>
+
+<a href="/restaurant/new">Add a new restaurant</a>
+
